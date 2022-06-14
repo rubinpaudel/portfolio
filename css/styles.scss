@@ -1,0 +1,273 @@
+@import "./breakpoints.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+/* Variables */
+$dark-color : #101010;
+$light-color : #ffffff;
+$muted-color : #ADADAD;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+i { cursor: pointer;}
+
+.heading {
+
+    font-size: 6rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+
+    @include media("<=tablet") {
+        font-size: 3rem;
+    }
+
+}
+
+
+.subheading {
+    font-size: 4.0rem;
+    font-weight: 700;
+    padding-bottom: .5rem;
+    
+    @include media("<=tablet") {
+        font-size: 2rem;
+    }
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.px-1 {
+    padding: 0rem 1rem;
+}
+
+.small-heading {
+    font-size: 2.0rem;
+    font-weight: 700;
+    padding-bottom: .75rem;
+    @include media("<=tablet") {
+        font-size: 1.5rem;
+    }
+}
+
+.subheading-hero {
+    font-size: 4.5rem;
+    font-weight: 700;
+    padding-bottom: .5rem;
+    
+    @include media("<=tablet") {
+        font-size: 2.25rem;
+    }
+
+}
+
+
+.paragraph {
+    font-weight: 500;
+    font-size: 1.3rem;
+    width: 50%;
+    @include media("<=desktop") {
+        width: 75%;
+    }
+    @include media("<=tablet") {
+        width: 100%;
+    }
+}
+
+.paragraph-small {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.py-1 { 
+   padding: 1rem 0; 
+}
+
+.link {
+    text-decoration: none;
+    color: $light-color;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.text-dark {
+    color: $dark-color;
+}
+
+.text-light {
+    color: $light-color;
+}
+
+.text-muted {
+    color: $muted-color;
+}
+
+
+.dark-bg {
+    background-color: $dark-color;
+    color: $light-color;
+}
+
+.light-bg {
+    background-color: $light-color;
+    color: $dark-color;
+}
+
+.content {
+    padding: 0 7.5rem;
+    padding-bottom: 7.5rem;
+    
+    @include media("<=tablet") {
+        padding: 0 3.5rem;
+        padding-bottom: 7.5rem;
+    }
+    @include media("<=phone") {
+        padding: 0 1.5rem;
+        padding-bottom: 7.5rem;
+    }
+
+}
+
+button {
+    background-color: $dark-color;
+    color: $light-color;
+    border-radius: 12px;
+    padding: .75rem 0;
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 40%;
+
+
+
+    @include media("<=tablet") {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+}
+
+.bi-folder {
+    cursor: default !important;
+}
+
+.reset {
+    text-decoration: none;
+    color: $dark-color;
+}
+.wave-img {
+    height: 5rem;
+    width: 5rem;
+    @include media("<=tablet") {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}
+
+.contact-info {
+    padding-top: 1.5rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin-right: .5rem;
+}
+
+.pill {
+    background-color: $light-color;
+    color: $dark-color;
+    border-radius: 6px;
+    margin-left: .5rem;
+    font-weight: 700;
+    padding: .5rem;
+
+    @include media("<=450px") {
+        font-size: 0.8rem;
+    }
+
+}
+
+.contact {
+    display: flex;
+    flex-flow: column;
+}
+.footer {
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.w-40 { width: 40%;}
+.w-50 { width: 50%;}
+.w-60 { width: 60%;}
+
+.pb-1 { padding-bottom: 1rem; }
+.pt-5 { padding-top: 5rem; }
+
+.skills { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+.card {
+    background-color: $light-color;
+    color: $dark-color;
+    width: 25%;
+    padding: 2rem;
+    margin-right: 2rem;
+    @include media("<=desktop") {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    @include media("<=tablet") {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-right: 0rem;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    .card-icons-heading {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        i {
+            font-size: 1.5rem;
+        }
+        padding-bottom: 1rem;
+    }
+
+    .card-title {
+        font-weight: 700;
+        padding-bottom: 1rem;
+    }
+
+    .card-text {
+        padding-bottom: 1rem;
+    }
+    .card-footer {
+        justify-self: end;
+    }
+}
