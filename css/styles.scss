@@ -138,7 +138,34 @@ i { cursor: pointer;}
 
 }
 
-button {
+.skill-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 6em;
+    margin-bottom: 1em;
+    padding: 0;
+    margin-top: 1em;
+    
+    @include media("<=tablet") {
+        margin-top: 3em;
+        display: inline;
+    }
+}
+
+
+li {
+    list-style-type: none;
+    margin-right: 20px;
+    height: 1.2em;
+    box-sizing: border-box;
+}
+
+li::before {
+    content: "\25BA \0020";
+}
+.btn {
     background-color: $dark-color;
     color: $light-color;
     border-radius: 12px;
@@ -146,6 +173,8 @@ button {
     font-family: 'Montserrat', sans-serif;;
     font-weight: 700;
     font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     width: 40%;
 
@@ -172,6 +201,12 @@ button {
     @include media("<=tablet") {
         height: 2.5rem;
         width: 2.5rem;
+    }
+}
+
+.m-pt-2 {
+    @include media("<=tablet") {
+        padding-top: 2rem;
     }
 }
 
@@ -229,6 +264,8 @@ button {
     flex-wrap: wrap;
     margin-top: 1.5rem;
 }
+
+
 .card {
     background-color: $light-color;
     color: $dark-color;
